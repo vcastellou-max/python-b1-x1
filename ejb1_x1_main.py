@@ -65,7 +65,7 @@ def find_largest_word(text):
                          
 
 def is_palindrome_word(word):
-    word=remove_punctuation_marks(word) #Primero limpiamos la palabra que queremos estuidar de signos de puntuación
+    word=remove_punctuation_marks(word).lower() #Primero limpiamos la palabra que queremos estuidar de signos de puntuación. El lower es para ignorar mayúsculas y minúsculas.
     if len(word)<=1: 
         return True #La palabra es un palindromo si solo tiene una letra o menos (obvio)
     if word[0] == word[-1] and is_palindrome_word(word[1:-1]):
